@@ -23,12 +23,15 @@ export class Tiger extends Animal {
         }
     }
     makeSound() {
+        this.fatigue -= 10;
         return `Tiger roars!`;
     }
     swim() {
+        this.fatigue -= 25;
         return `Tiger is swimming.`;
     }
     hunt() {
+        this.fatigue -= 35;
         return `Tiger is hunting.`;
     }
 }

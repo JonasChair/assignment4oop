@@ -11,6 +11,7 @@ const zebra = new Zebra(`Alan`, 5, 30, `Afrika`);
 const zookeeper = new Zookeeper(`Alfonsas`);
 const zoo = new Zoo(zebra, elephant, tiger, zookeeper);
 logger.log(zoo.zookeeper.feedAnimal(zoo.zebra, 15));
+logger.log(zoo.zebra.run());
 logger.log(zoo.zebra.checkFatigue());
 logger.log(zoo.elephant.makeSound());
 logger.log(zoo.elephant.walk());

@@ -16,6 +16,7 @@ export class Zebra extends Animal implements IWalkerSleeper, IJumperRunner {
     }
 
     makeSound(): string {
+        this.fatigue -= 10;
         return `Zebra sound`;
     }
 
@@ -32,14 +33,17 @@ export class Zebra extends Animal implements IWalkerSleeper, IJumperRunner {
     }
 
     walk(): string {
+        this.fatigue -= 20;
         return `Zebra is walking!`;
     }
 
     jump(): string {
+        this.fatigue -= 30;
         return `Zebra jumped`;
     }
     
     run(): string {
+        this.fatigue -= 50;
         return `Zebra is running at ${this.maxSpeed} km/h!`
     }
 }
